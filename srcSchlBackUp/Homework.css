@@ -1,0 +1,57 @@
+@media (min-width: 992px) {
+    .col-md-border:not(:last-child) {
+        border-right: 1px solid #d7d7d7;
+    }
+    .col-md-border + .col-md-border {
+        border-left: 1px solid #d7d7d7;
+        margin-left: -1px;
+    }
+}
+
+#tableOverflow {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+#calendar-div{ top: 46px; }
+#cal-filters{ top: 0; position:absolute; height: 46px; background: #f7f7f7; padding-top: 12px; width: 100%;}
+#cal-opts-filter{ width: auto;}
+#today-selfilter{ width: auto;  float: right;  margin-right: 12px;}
+/* Create two columns/boxes that floats next to each other */
+aside {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    #sidebar, #article {
+        width: 100%;
+        height: auto;
+    }
+}
